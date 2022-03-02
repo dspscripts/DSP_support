@@ -25,10 +25,22 @@ proliferate_dict = {
 
 
 item_dict = {
+    "annihilation_constraint_sphere": {
+        "building": "assembler",
+        "ingredients": ["1 processor", "1 particle_container"],
+        "craft_speed": 20,
+        "output": 1,
+    },
     "antimatter": {
         "building": "particle collider",
         "ingredients": ["2 critical_photon"],
         "craft_speed": 2,
+        "output": 2,
+    },
+    "antimatter_fuel_rod": {
+        "building": "assembler",
+        "ingredients": ["12 antimatter","12 hydrogen","1 annihilation_constraint_sphere","1 titanium_alloy"],
+        "craft_speed": 24,
         "output": 2,
     },
     "blue_cube": {
@@ -75,6 +87,12 @@ item_dict = {
         "craft_speed": 10,  # just to keep the number of ingredients/output integers
         "output": 12,
     },
+    "deuterium_fuel_rod": {
+        "building": "assembler",
+        "ingredients": ["1 titanium_alloy", "20 deuterium", "1 supermagnetic_ring"],
+        "craft_speed": 6,
+        "output": 1,
+    },
     "diamond": {
         "building": "smelter",
         "ingredients": ["1 kimberlite_ore"],
@@ -85,6 +103,18 @@ item_dict = {
         "building": "assembler",
         "ingredients": ["2 iron_ingot", "1 gear", "1 magnetic_coil"],
         "craft_speed": 2,
+        "output": 1,
+    },
+    "foundation": {
+        "building": "assembler",
+        "ingredients": ["3 stone_brick", "1 steel"],
+        "craft_speed": 1,
+        "output": 1,
+    },
+    "frame_material": {
+        "building": "assembler",
+        "ingredients": ["4 carbon_nanotube", "1 titanium_alloy", "1 silicon_ingot"],
+        "craft_speed": 6,
         "output": 1,
     },
     "gear": {
@@ -135,17 +165,35 @@ item_dict = {
         "craft_speed": 4,
         "output": 1,
     },
+    "photon_combiner": {
+        "building": "assembler",
+        "ingredients": ["1 optical_crystal", "1 circuit_board"],
+        "craft_speed": 3,
+        "output": 1,
+    },
     "plane_filter": {
         "building": "assembler",
         "ingredients": ["1 casimir_crystal", "2 titanium_glass"],
         "craft_speed": 12,
         "output": 1,
     },
+    "plasma_exciter": {
+        "building": "assembler",
+        "ingredients": ["4 magnetic_coil", "2 prism"],
+        "craft_speed": 2,
+        "output": 1,
+    },
     "plastic": {
         "building": "chemical facility",
-        "ingredients": ["2 refined_oil", "1 energetic_graphite"],
+        "ingredients": ["2 refined_oil", "1 graphite"],
         "craft_speed": 3,
         "output": 1,
+    },
+    "prism": {
+        "building": "assembler",
+        "ingredients": ["3 glass"],
+        "craft_speed": 2,
+        "output": 2,
     },
     "processor": {
         "building": "assembler",
@@ -167,7 +215,7 @@ item_dict = {
     },
     "red_cube": {
         "building": "matrix lab",
-        "ingredients": ["2 energetic_graphite", "2 hydrogen"],
+        "ingredients": ["2 graphite", "2 hydrogen"],
         "craft_speed": 6,
         "output": 1,
     },
@@ -177,11 +225,59 @@ item_dict = {
         "craft_speed": 4,
         "output": 2,
     },
+    "rocket": {
+        "building": "assembler",
+        "ingredients": ["2 dyson_sphere_component", "4 deuterium_fuel_rod", "2 quantum_chip"],
+        "craft_speed": 6,
+        "output": 1,
+    },
+    "solar_sail": {
+        "building": "assembler",
+        "ingredients": ["1 photon_combiner", "1 graphene"],
+        "craft_speed": 4,
+        "output": 2,
+    },
+    "space_wrapper_cube": {
+        "building": "assembler",
+        "ingredients": ["1 green_cube"],
+        "craft_speed": 10,
+        "output": 8,
+    },
+    "space_wrapper_lens": {
+        "building": "assembler",
+        "ingredients": ["1 graviton_lens"],
+        "craft_speed": 10,
+        "output": 1,
+    },
+    "dyson_sphere_component": {
+        "building": "assembler",
+        "ingredients": ["3 frame_material", "3 processor", "3 solar_sail"],
+        "craft_speed": 8,
+        "output": 1,
+    },
+    "steel": {
+        "building": "smelter",
+        "ingredients": ["3 iron_ingot"],
+        "craft_speed": 3,
+        "output": 1,
+    },
     "strange_matter": {
         "building": "particle collider",
         "ingredients": ["2 particle_container", "2 iron_ingot", "10 deuterium"],
         "craft_speed": 8,
         "output": 1,
+    },
+    "supermagnetic_ring": {
+        "building": "assembler",
+        "ingredients": ["2 turbine", "3 magnet", "1 graphite"],
+        "craft_speed": 3,
+        "output": 1,
+    },
+    "titanium_alloy": {
+        "building": "smelter",
+        "ingredients": ["4 steel", "4 titanium_ingot", "8 sulfuric_acid"],
+        "craft_speed": 12,
+        "output": 4,
     },
     "titanium_crystal": {
         "building": "assembler",
