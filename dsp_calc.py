@@ -39,7 +39,12 @@ item_dict = {
     },
     "antimatter_fuel_rod": {
         "building": "assembler",
-        "ingredients": ["12 antimatter","12 hydrogen","1 annihilation_constraint_sphere","1 titanium_alloy"],
+        "ingredients": [
+            "12 antimatter",
+            "12 hydrogen",
+            "1 annihilation_constraint_sphere",
+            "1 titanium_alloy",
+        ],
         "craft_speed": 24,
         "output": 2,
     },
@@ -227,7 +232,11 @@ item_dict = {
     },
     "rocket": {
         "building": "assembler",
-        "ingredients": ["2 dyson_sphere_component", "4 deuterium_fuel_rod", "2 quantum_chip"],
+        "ingredients": [
+            "2 dyson_sphere_component",
+            "4 deuterium_fuel_rod",
+            "2 quantum_chip",
+        ],
         "craft_speed": 6,
         "output": 1,
     },
