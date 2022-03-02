@@ -166,7 +166,7 @@ item_dict = {
     },
     "particle_container": {
         "building": "assembler",
-        "ingredients": ["2 graphene", "2 iron_ingot", "2 turbine"],
+        "ingredients": ["2 graphene", "2 copper_ingot", "2 turbine"],
         "craft_speed": 4,
         "output": 1,
     },
