@@ -18,6 +18,8 @@ Deuterium from fractionator assumes fully stacked Mk.3 belts of hydrogen.
 
 Assume ray receivers run with graviton lenses.
 
+The hydrogen used by fractionators is called hydrogen_frac
+
 ## usage
     python dsp_calc.py -h
 
