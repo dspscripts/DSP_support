@@ -78,6 +78,12 @@ item_dict = {
         "craft_speed": 60,
         "output": 12,
     },
+    "critical_photon_prolif": {
+        "building": "ray receiver",  # with proliferated graviton lens
+        "ingredients": ["480 swarm_sphere_MW"],
+        "craft_speed": 60,
+        "output": 24,
+    },
     "crystal_silicon": {
         "building": "assembler",
         "ingredients": ["1 fractal_silicon"],
@@ -349,13 +355,17 @@ def dsp_calc(
         resource_list / craft_speed
     )  # products per second
 
-    proliferated_output = recipe_output * proliferate_dict[proliferator_level]
+    if building == 'fractionator' and proliferator_level==3:
+        # with proliferator level 3 the chance to get a deuterium is 2% instead of 1%
+        proliferated_output = recipe_output * 2.0
+    else:
+        proliferated_output = recipe_output * proliferate_dict[proliferator_level]
     output_flow_per_building = proliferated_output / craft_speed  # products per second
 
     n_buildings = desired_flow / output_flow_per_building
     n_buildings = int(-(-n_buildings // 1))  # rounded up
 
-    if building == "ray receiver":
+    if building == "ray receiver": # critical photons, use total power consumption
         resources_consumption = n_buildings * resource_list
     else:
         resources_consumption = n_buildings * resources_consumption_per_building
@@ -384,6 +394,9 @@ def full_dsp_calc(
 ):
     if item not in item_dict:
         raise Exception(f"No {item} in the item dictionary")
+
+    if item == 'critical_photon' and proliferator_level == 3:
+        item = 'critical_photon_prolif'
 
     n_ingredient_list = [int(i.split()[0]) for i in item_dict[item]["ingredients"]]
     ingredient_list = [i.split()[1] for i in item_dict[item]["ingredients"]]
